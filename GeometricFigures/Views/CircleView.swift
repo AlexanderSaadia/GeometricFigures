@@ -4,6 +4,8 @@
 
 // $ means: “This control is connected to that stored property.”
 
+// Every program you write can be described as: Input → Processing → Output In this app: Input: the slider (user chooses a radius) Processing: the computed properties in the Circle model Output: the text views that show radius/diameter/area/circumference
+
 
 import SwiftUI
 
@@ -27,6 +29,11 @@ struct CircleView: View {
             
             // Label showing the current slider value
             Text("Radius is \(currentCircle.radius.formatted())")
+            
+            // Label showing other information about the circle
+            Text("Diameter is \(currentCircle.diameter.formatted())")
+            Text("Area is \(currentCircle.area.formatted())")
+            Text("Circumference is \(currentCircle.circumference.formatted())")
             
         }
     }
